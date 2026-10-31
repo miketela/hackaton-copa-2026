@@ -1,0 +1,19 @@
+# challenge repos are cloned here on the day (they have their own git history)
+challenge/*
+!challenge/README.md
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+# secrets / local env
+.env
+.env.*
+*.pfx
+*.publishsettings
+# build output
+bin/
+obj/
+node_modules/
+*.zip
+.DS_Store

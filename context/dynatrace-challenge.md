@@ -1,0 +1,1 @@
+../skills/copa-dynatrace-challenge/SKILL.md

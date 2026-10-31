@@ -1,0 +1,1 @@
+../skills/copa-microsoft-challenge/SKILL.md
