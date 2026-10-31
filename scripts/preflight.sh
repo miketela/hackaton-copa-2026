@@ -29,14 +29,10 @@ fi
 
 echo
 echo "Azure"
-if command -v az >/dev/null 2>&1; then
-  if az account show -o none 2>/dev/null; then
-    az account show --query '{subscription:name, tenant:tenantId, user:user.name}' -o table
-    warn "Confirm this is the hackathon tenant / 'Suscripción 1' before deploying (az account set --subscription ...)."
-  else
-    warn "Not logged in. On challenge day: az login (only the 1-2 designated people, one at a time, from the venue network)."
-  fi
-fi
+# Does not query or print your Azure account. Login happens on challenge day only,
+# with the Hotmail/Outlook account registered for the event (B2B guest), from the venue network.
+warn "Azure login is done on challenge day: az login with the event account, then confirm 'Suscripción 1' and rg-team-<id>."
+warn "Do not work with personal or company subscriptions in this repo (the Azure MCP server uses whatever az session is active)."
 
 echo
 echo "Repo"
